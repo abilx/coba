@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Transopsisi Cipher</title>
+  </head>
+  <body class="mt-3">
+    <div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar" class="active">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+				<div class="p-4">
+		  		<h1><a href="../../" class="logo">Kriptografi</a></h1>
+          <ul class="list-unstyled components mb-5">
+            <li>
+               <a href="../affine-cipher/"><span class="fa fa-key mr-3"></span>Affine Cipher</a>
+            </li>
+            <li>
+               <a href="../caesar-cipher/"><span class="fa fa-key mr-3"></span>Caesar Cipher</a>
+            </li>
+            <li>
+               <a href="../hill-cipher/"><span class="fa fa-key mr-3"></span>Hill Cipher</a>
+            </li>
+            <li>
+               <a href="../playfair-cipher/"><span class="fa fa-key mr-3"></span>Playfair Cipher</a>
+            </li>
+            <li class="active">
+               <a href="../transposisi-cipher/"><span class="fa fa-key mr-3"></span>Transposisi Cipher</a>
+            </li>
+            <li>
+               <a href="../vigenere-cipher/"><span class="fa fa-key mr-3"></span>Vigenere Cipher</a>
+            </li>
+            <li>
+               <a href="../zigzag-cipher/"><span class="fa fa-key mr-3"></span>Zigzag Cipher</a>
+            </li>
+         </ul>  
+
+
+	        <div class="footer" style="font-size: 15px">
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made by Group 11 <i class="icon-heart" aria-hidden="true"></i> : Muhammad Abil & Ibnu Muchda Nur Yassin Nasution</a>
+						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+
+
+
+    <div class="container">
+      <h1>Transposisi Cipher</h1>
+      <div class = "row">
+        <div class="col mt-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Encryption</h2>
+              <form>
+                <div class="form-group">
+                  <label for="plaintextInput">Plaintext:</label>
+                  <input  class="form-control" id="plaintextInput" placeholder="Enter plaintext">
+                </div>
+
+                <div class="form-group">
+                  <label for="keyEncryptInput">Key:</label>
+                  <input type="number" class="form-control" id="keyEncryptInput" placeholder="Enter key">
+                </div>
+
+                <button type="button" class="btn" id="encrypt">Encrypt</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mt-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Decryption</h2>
+              <form>
+                <div class="form-group">
+                  <label for="ciphertextInput">Ciphertext:</label>
+                  <input class="form-control" id="ciphertextInput" placeholder="Enter ciphertext">
+                </div>
+
+                <div class="form-group">
+                  <label for="keyDecryptInput">Key:</label>
+                  <input type="number" class="form-control" id="keyDecryptInput" placeholder="Enter key">
+                </div>
+
+                <button type="button" class="btn" id="decrypt">Decrypt</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-3"><small>Note: support for uppercase characters, numbers, and symbols will be added whenever I feel like it</small></p>
+      <div class="row mt-3">
+        <div class="col">
+          <!--<h2>Input:</h2>-->
+          <!--<p id="output5">-->
+          <!--</p>-->
+          <!--<p id="output2">-->
+          <!--</p>-->
+          <!--<h2>Key:</h2>-->
+          <!--<p id="output4">-->
+          <!--</p>-->
+          <!--<p id="output3">-->
+          <!--</p>-->
+          <h2>Output:</h2>
+          <p id="output">
+          <!--</p>-->
+          <!--<p id="output6">-->
+          <!--</p>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/popper.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="cipher.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
